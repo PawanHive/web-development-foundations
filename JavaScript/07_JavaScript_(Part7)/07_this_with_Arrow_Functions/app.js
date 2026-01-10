@@ -14,23 +14,23 @@
 2. NORMAL FUNCTION me jo Object 'this' ko call karta hai wahi Object 'this' ka value hota hai.
 */
 
-// const student = {        // global scope
-//     name: 'aman',
-//     marks: 95,
-//     prop: this,        // Calling Object ka 'this'... kyu ki iske scope me 'window' object h.    //output: prop: Window {window: Window, self: Window, document: document, name: '', location: Location, …}[Prototype]]: Object
-//     getName: function() {       // NORMAL FUNCTION
-//         console.log(this)                       // prints student objects
-//         return this.name;       // (this.name) accessed
-//     },
-//     getMarks: () => {           // ARROW FUNCTION
-//         console.log(this);   //parent's scope  // is 'this' ka parent has 'student' object or 'student' scope hai 'global scope'...jiski wajah se yah 'window' objects print kar raha h                 // prints window objects      
-//         return this.marks;      // not accessed prints "undefined"
-//     }, 
+const student = {        // global scope
+    name: 'aman',
+    marks: 95,
+    prop: this,        // Calling Object ka 'this'... kyu ki iske scope me 'window' object h.    //output: prop: Window {window: Window, self: Window, document: document, name: '', location: Location, …}[Prototype]]: Object
+    getName: function() {       // NORMAL FUNCTION
+        console.log(this)                       // prints student objects
+        return this.name;       // (this.name) accessed
+    },
+    getMarks: () => {           // ARROW FUNCTION
+        console.log(this);   //parent's scope  // is 'this' ka parent has 'student' object or 'student' scope hai 'global scope'...jiski wajah se yah 'window' objects print kar raha h                 // prints window objects      
+        return this.marks;      // not accessed prints "undefined"
+    }, 
     
-// }
-// console.log(student)
-// console.log(student.getName())
-// console.log(student.getMarks())
+}
+console.log(student)
+console.log(student.getName())
+console.log(student.getMarks())
 
 //----------------------------------------------------------
 // but 'this' works better when defined inside arrow function and used as callback for some methods like setInterval() or setTimeout()
