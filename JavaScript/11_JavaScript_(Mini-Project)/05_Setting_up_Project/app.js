@@ -73,12 +73,11 @@ function checkAns(idx) {
             highScore = level;
         }
 
-
         h2.innerHTML = `
         Game Over!<br>
         Your score was <b>${level}</b><br>
         Highest score: <b>${highScore}</b><br> 
-        Press any key to start.
+        Press any key to restart.
         `;
         document.querySelector('body').style.backgroundColor = 'red';
         setTimeout(function() {
