@@ -24,7 +24,7 @@ else if (age < 18) {
 
 
 // Example 2 ---------------------------------------
-let marks = 32;
+let marks = 33;
 if (marks >= 80) {
     console.log("A+");
 }
@@ -34,7 +34,7 @@ else if (marks >= 60) {
 else if (marks > 33) {
     console.log("B")
 }
-else if (marks == 33) {         // '=' is assignment operator not comaprison operator
+else if (marks == 33) {         // '==' is assignment operator not comaprison operator
     console.log("Just Pass")
 }
 else if (marks < 33) {
